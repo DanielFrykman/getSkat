@@ -1,8 +1,8 @@
 
 /**
- * Rulls the lates rate for tax free driving allowance from skat.dk.
- * Rulls the rate for driving in own car after 20.000km/year.
- * Returns the rate as a number with a , as decimal point.
+ * Pulls the rate for tax-free driving allowance from skat.dk.
+ * Pulls the rate for driving in own car after 20.000km/year.
+ * Returns the rate as a number with a, as a decimal point.
  * 
  * Henter satsen for skattefri kørselsgodkørelse fra skat.dk.
  * Henter satsen for kørsel i egen bil over 20.000km/år.
@@ -24,7 +24,7 @@ function getSkatdk() {
   var matchText = websiteContent.match(RegExp1);
   var matchText2 = matchText[0].match(RegExp2);
 
-  //should be commented out if decimal point should be . insted of ,
+  //should be commented out if the decimal point should be . instead of ,
   //skal udkommentares ud hvis decimal punktet skal være . istedet for ,
   matchText2 = Number(matchText2[0].replace(/,/g, '.'))
   
